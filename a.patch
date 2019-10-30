@@ -7,10 +7,10 @@ Subject: [PATCH] Patch x509write_crt.c for attestedTLS
  .../mbedtls/library/x509write_crt.c   | 143 +++++++++++-------
  1 file changed, 89 insertions(+), 54 deletions(-)
 
-diff --git a/3rdparty/mbedtls/mbedtls/library/x509write_crt.c b/3rdparty/mbedtls/mbedtls/library/x509write_crt.c
+diff --git a/mbedtls/library/x509write_crt.c b/mbedtls/library/x509write_crt.c
 index 41dfe87b7..de7bf0c70 100644
---- a/3rdparty/mbedtls/mbedtls/library/x509write_crt.c
-+++ b/3rdparty/mbedtls/mbedtls/library/x509write_crt.c
+--- a/mbedtls/library/x509write_crt.c
++++ b/mbedtls/library/x509write_crt.c
 @@ -298,9 +298,10 @@ static int x509_write_time( unsigned char **p, unsigned char *start,
      return( (int) len );
  }
